@@ -1,0 +1,4 @@
+services:
+#    iritec_content.example:
+#        class: Iritec\ContentBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

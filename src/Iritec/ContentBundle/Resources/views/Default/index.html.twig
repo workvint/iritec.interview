@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/iriteccontent/js/main.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="panel panel-default" style="height: 130px;">
+        
+        <div id="options">
+            <div class="col-xs-6">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="width: 200px;">Страница</span>
+                    <input name="page" value="1" type="text" class="form-control" />
+                </div>
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="width: 200px;">Сортировка по</span>
+                    <input name="sort" value="date" type="text" class="form-control" />
+                </div>
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="width: 200px;">Элементов на странице</span>
+                    <input name="limit" value="5" type="text" class="form-control" />
+                </div>
+
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" style="width: 200px;">Порядок сортировки:</span>
+                    <input name="order" value="asc" type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <br>
+                <button id="test" type="button" class="btn btn-primary">Выполнить запрос</button>
+
+                <br><br><br>
+                <em>Получено результатов: </em><b id="result-count">5</b>
+            </div>
+        </div>
+        
+        <div id="bottom-crumbs" style="display: none;">
+            <div class="panel-body">
+                <a href="{{ path(app.request.get('_route')) }}">&lArr; Список новостей</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content" class="list-group" style="min-height: 200px;">
+    </div>
+        
+    <script type="text/template" id="news-template">
+        <h4 class="list-group-item-heading"><%=title%></h4>
+        <p class="list-group-item-text"><%=date%></p>
+        <p class="list-group-item-text"><%=content%></p>
+    </script>
+{% endblock %}

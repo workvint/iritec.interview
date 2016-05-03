@@ -1,3 +1,9 @@
-app:
-    resource: "@AppBundle/Controller/"
+iritec_content:
+    resource: "@IritecContentBundle/Controller/"
     type:     annotation
+    prefix:   /
+
+iritec_news:
+    resource: "@IritecNewsBundle/Controller/"
+    type:     annotation
+    prefix:   /
