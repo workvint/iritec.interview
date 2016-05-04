@@ -29,7 +29,7 @@ $ app/console do:fi:lo -n
 # Структура проекта
 
 
-* Iritec\NewsBunble - api для новостей (доступен по /api/news) 
+* Iritec\NewsBundle - api для новостей (доступен по /api/news) 
 
 * Iritect\ContentBundle - пример клиента на Backbonejs (доступен по /)
 
